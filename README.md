@@ -9,7 +9,7 @@ Template Installation
 
 To setup **and install** this GNU Stow template execute:
 
-    git clone git@github.com:Paradiesstaub/gnu_stow_template.git ~/.dotfiles
+    git clone https://github.com/Paradiesstaub/gnu_stow_template.git ~/.dotfiles
     cd ~/.dotfiles
     ./INSTALL
 
