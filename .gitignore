@@ -1,0 +1,10 @@
+ssh/.ssh/known_hosts*
+*.txt~
+
+# moc
+moc/.moc/cache/
+moc/.moc/equalizer
+moc/.moc/last_directory
+moc/.moc/softmixer
+moc/.moc/pid
+moc/.moc/playlist.m3u

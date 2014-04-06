@@ -1,0 +1,87 @@
+#!/usr/bin/env bash
+
+DEFAULT_PKG="stow emacs24-nox zsh git golang \
+golang-mode ack-grep htop lame sqlite"
+VM_PKG="stow emacs24-nox zsh git"
+
+clear;
+QUESTION="Select installation type:\n\
+(n to cancel)\n\n\
+(0) DEFAULT:\t${DEFAULT_PKG}\n\
+(1) VM:\t\t${VM_PKG}"
+
+default() {
+    echo "DEFAULT"
+
+    # install packages and remove default .profile
+    clear
+    echo -e "1. install packages:\n${DEFAULT_PKG}\n"
+    sudo apt-get install $DEFAULT_PKG
+    clear
+    rm ~/.profile
+
+    # create golang folders   
+    mkdir -p $HOME/src/go/{bin,pkg,src}
+
+    # stow
+    clear
+    echo "2. stow dotfile folders"
+    stow emacs git profile sqlite zshrc
+
+    # zsh
+    echo "3. set zsh as default shell"
+    chsh -s /bin/zsh
+}
+
+vm() {
+    echo "VM"
+
+    # install packages and remove default .profile
+    clear
+    echo -e "1. install packages:\n${VM_PKG}\n"
+    sudo apt-get install $VM_PKG
+    clear
+    rm ~/.profile
+
+    # remove files
+    clear
+    echo "2. remove not needed files"
+    rm -rf .git "ssh" sqlite
+
+    # stow
+    echo "3. stow dotfile folders"
+    stow emacs zshrc git profile
+
+    # zsh
+    echo "4. set zsh as default shell"
+    chsh -s /bin/zsh
+}
+
+echo -e $QUESTION
+
+while true
+do
+    # -n return after 1 char
+    # -s don't echo user input
+    read -n 1 -s ANSWER
+
+    case $ANSWER in
+	0* )
+	    default
+	    break;;
+
+	1* )
+	    vm
+	    break;;
+
+	[nN]* )
+	    clear;
+	    echo "abort"
+	    exit;;
+
+	* )
+	    clear
+	    echo -e "Input Error\n"$QUESTION;;
+    esac
+done
+

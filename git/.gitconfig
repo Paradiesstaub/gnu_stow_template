@@ -1,0 +1,28 @@
+[user]
+	name = Grumpy Cat
+	email = grumpy_cat@gmail.com
+[color]
+	ui = auto
+	status = auto
+	branch = auto
+[alias]
+	co = checkout
+	br = branch
+	s = status -s
+	ca = commit -a
+	cam = commit -am
+	l = log --graph --pretty=pretty-history --abbrev-commit --date=relative
+	fp = fetch -p
+	rpull = pull --rebase
+	totalcommits = shortlog -sn
+[pack]
+	threads = 0
+[core]
+	editor = emacs
+[push]
+	default = simple
+
+[pretty]
+	# style: bold, dim, reverse, ul, blink
+	# color: normal, black, red, green, yellow, blue, magenta, cyan, white
+	pretty-history = format:%C(bold yellow)%d %Creset%Cgreen%cr%Creset %s %C(cyan)<%an>%Creset %C(dim)%h
