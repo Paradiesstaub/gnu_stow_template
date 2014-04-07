@@ -1,5 +1,5 @@
-GNU Stow Template
-=================
+Stow Template
+=============
 
 Ever wanted all your dotfiles in one folder, with version control and an easy way to deploy it on new machines? If yes, then this template is for you.
 
@@ -7,7 +7,7 @@ Ever wanted all your dotfiles in one folder, with version control and an easy wa
 Template Installation
 ---------------------
 
-To setup **and install** this GNU Stow template execute:
+To setup **and install** this Stow template execute:
 
     git clone https://github.com/Paradiesstaub/gnu_stow_template.git ~/.dotfiles
     cd ~/.dotfiles
@@ -19,12 +19,12 @@ What is GNU Stow?
 
 GNU Stow is a program, which allows you to create symbolic links out of one base directory. The Stow base directory of this template is named `.dotfiles` and should be saved in the home folder (`~/.dotfiles`). To use Stow the base directory sould follow a certain structure:
 
-    ~/[stow dir]/[random name]/[content] 
+    ~/[stow dir]/[random name]/[content]
     ~/.dotfiles/git/.gitconfig
 
 When executing `stow git`, Stow makes symblolic links from the content of the git folder to `~/.gitconfig`.
 
-This also works for home sub-folders like `~/.config`:  
+This also works for home sub-folders like `~/.config`:
 `~/.dotfiles/config/.config/`
 
 
