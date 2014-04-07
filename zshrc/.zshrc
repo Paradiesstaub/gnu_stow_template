@@ -82,6 +82,7 @@ alias n='emacs ~/.note.txt'
 alias e='emacs'
 
 alias dt='clear; cd /tmp'
+alias dg='clear; cd ~/src/go/src'
 alias __='sudo -i'
 
 alias -g G='| grep -i' # ignore case
