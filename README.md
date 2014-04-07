@@ -19,8 +19,8 @@ What is GNU Stow?
 
 GNU Stow is a program, which allows you to create symbolic links out of one base directory. The Stow base directory of this template is named `.dotfiles` and should be saved in the home folder `~/.dotfiles`. To use Stow the base directory sould follow a certain structure:
 
-`~/[stow dir]/[random name]/[content]`  
-`~/.dotfiles/git/.gitconfig`
+    ~/[stow dir]/[random name]/[content] 
+    ~/.dotfiles/git/.gitconfig
 
 When executing `stow git`, Stow makes symblolic links from the content of the git folder to `~/.gitconfig`.
 
