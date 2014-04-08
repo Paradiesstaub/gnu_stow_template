@@ -24,8 +24,8 @@ GNU Stow is a program, which allows you to create symbolic links out of one base
 
 When executing `stow git`, Stow makes symbolic links from the content of the git folder to `~/.gitconfig`.
 
-This also works for home sub-folders like `~/.config`:
-`~/.dotfiles/config/.config/`
+This also works for home sub-folders like `~/.config`:  
+`~/.dotfiles/config/.config/random_cfg`
 
 
 Stow Setup Script

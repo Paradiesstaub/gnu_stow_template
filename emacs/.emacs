@@ -7,9 +7,6 @@
 ;; no new lines at the end
 (setq next-line-add-newlines nil)
 
-;; delete \b at line ends before saving a file
-(add-hook 'write-file-hooks 'delete-trailing-whitespace)
-
 ;; disable menu bar mode
 (menu-bar-mode -1)
 
