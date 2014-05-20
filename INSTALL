@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 DEFAULT_PKG="stow emacs24-nox zsh git golang \
-golang-mode ack-grep htop lame sqlite"
+golang-mode golang-go.tools ack-grep htop lame sqlite"
 VM_PKG="stow emacs24-nox zsh git"
 
 clear;
