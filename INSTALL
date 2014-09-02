@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 DEFAULT_PKG="stow emacs24-nox zsh git golang \
-golang-mode golang-go.tools ack-grep htop lame sqlite"
-VM_PKG="stow emacs24-nox zsh git"
+golang-mode golang-go.tools ack-grep htop lame sqlite mosh"
+VM_PKG="stow emacs24-nox zsh git mosh"
 
 clear;
 QUESTION="Select installation type:\n\
